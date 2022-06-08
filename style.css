@@ -1,0 +1,114 @@
+*{
+    margin: 0; /* le saco los margenes/paddings por defecto */
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header, footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #1b1b1b;
+    padding: 20px;
+}
+
+header img{
+    width: 200px;
+}
+
+nav{
+    width: 30%;
+}
+
+nav ul{
+    display: flex; /* el padre actua como flex para alinear los elementos de la lista*/
+    list-style: none; /* saca el disco de la lista */
+    justify-content: space-around; /* separa los elementos con espacio en el medio*/
+    height: 100%; /* sin altura no deja alinear verticalmente*/
+    align-items: center; /* alinea de forma vertical*/
+}
+
+nav ul a, footer ul a{ /* las propiedades del footer y header se comparten*/
+    color: white;
+    text-decoration: none;
+}
+
+main{
+    height: 500px; /* le di una altura por defecto para que tenga cuerpo*/
+    display: flex; 
+    flex-direction: row; /* los banners se muestran en fila*/
+    justify-content: space-between; /*separados por espacio en el medio*/
+    align-items: center; /* alineados verticalmente */
+    padding: 50px; /* aire para que no queden tan apretados*/
+    background-color: #e2e2e2;
+}
+
+main > div{
+    height: 100%;
+    background-color: white;
+    width: 48%;
+    margin: 5px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+main .promo{
+    background-image: url('img/delivery.jpg');
+    background-size: cover;
+}
+
+main .promo h2, main .podio h2{
+    color: red;
+}
+
+main .promo h2 span{
+    color: white;
+}
+
+main .podio{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+main .podio .contenedor{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    height: 100%;
+}
+
+main .podio .contenedor .imagen, main .podio .contenedor .lista{
+    height: 100%;
+    width: 50%;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main .podio .contenedor .lista ol{
+    text-align: left;
+    font-weight: bold;
+}
+
+main .podio .contenedor .lista ol li{
+    margin: 10px 0;
+}
+
+
+
+footer{
+    height: 150px;
+}
+
+footer ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 50px;
+    list-style: none;
+}
